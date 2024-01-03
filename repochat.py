@@ -10,7 +10,7 @@ from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationSummaryMemory
 from git import Repo
 
-os.environ['OPENAI_API_KEY'] = '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'
+os.environ['OPENAI_API_KEY'] = ''
 #repo_link = 'https://github.com/evanptaylor/positive-ev-props'
 
 class RepoChat:
