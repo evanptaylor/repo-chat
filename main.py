@@ -22,13 +22,13 @@ def print_by_char(start_string, text):
     print()
 
 def main():
-    print(termcolor.colored(f'=========REPO CHAT=========', attrs=["bold"]))
+    print(termcolor.colored(f'==================REPO CHAT==================', attrs=["bold"]))
 
     api_key = input("Input OpenAI Key: ")
     verify_api_key(api_key)
     time.sleep(1)
     
-    print('\n\n')
+    print('\n')
 
     repo_link = input('Input repository link: ')
     print('LOADING...')
@@ -38,14 +38,15 @@ def main():
     repo.embed()
     os.system('clear')
 
-    print(termcolor.colored(f'=========REPO CHAT=========', attrs=["bold"]))
+    print(termcolor.colored(f'==================REPO CHAT==================', attrs=["bold"]))
     print('type q to quit')
 
     while True:
-        question = input('Question: ')
+        question = input('User: ')
         if question in ['q', 'quit', 'exit']:
             break
         ans = repo.ask(question)
         print_by_char('>>> ', ans)
+        print('\n')
 
 main()
