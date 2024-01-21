@@ -26,6 +26,7 @@ def main():
 
     api_key = input("Input OpenAI Key: ")
     verify_api_key(api_key)
+    os.environ['OPENAI_API_KEY'] = api_key
     time.sleep(1)
     
     print('\n')
